@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS Fundamentals Part III</title>
+	<script type="text/javascript">
+	console.log("===== PERSON CONSTRUCTOR =====");
+	function personConstructor(name) {
+		return {
+			given_name: name,
+			distance_traveled: 0,
+			say_name: function() {
+				console.log(name);
+			},
+			say_something: function(say) {
+				console.log(name + " says '" + say + "'");
+			},
+			walk: function() {
+				console.log(name + " is walking");
+				person.distance_traveled+=3;
+			},
+			run: function() {
+				console.log(name + " is running");
+				person.distance_traveled+=10;
+			},
+			crawl: function() {
+				console.log(name + " is crawling");
+				person.distance_traveled+=1;
+			}
+		}
+	};
+		person = personConstructor("Vanessa");
+		person.say_name();
+		person.say_something('I am cool');
+		person.run();
+		person.walk();
+		person.crawl();
+		person.crawl();
+
+		console.log(person.distance_traveled);
+
+	console.log("===== NINJA CONSTRUCTOR =====");
+
+	function ninjaConstructor(name, cohort) {
+		return {
+			given_name: name,
+			given_cohort: cohort,
+			belt_level: "yellow_belt",
+			level_up: function() {
+				if(ninja.distance_traveled >= 30) {
+					ninja.belt_level = "green_belt";
+				}
+				if (ninja.distance_traveled >= 50) {
+					ninja.belt_level = "blue_belt";
+				}
+				console.log(name + " became a " + ninja.belt_level);
+			},
+			distance_traveled: 0,
+			say_name: function() {
+				console.log(name);
+			},
+			say_something: function(say) {
+				console.log(name + " says '" + say + "'");
+			},
+			walk: function() {
+				console.log(name + " is walking");
+				ninja.distance_traveled+=3;
+			},
+			run: function() {
+				console.log(name + " is running");
+				ninja.distance_traveled+=10;
+			},
+			crawl: function() {
+				console.log(name + " is crawling");
+				ninja.distance_traveled+=1;
+			}
+		}
+	};
+		ninja = ninjaConstructor("Vanessa", "August");
+		ninja.say_name();
+		ninja.say_something('I am cool');
+		ninja.run();
+		ninja.run();
+		ninja.run();
+		ninja.run();
+		ninja.run();
+		ninja.walk();
+		ninja.crawl();
+		ninja.crawl();
+		ninja.level_up();
+
+		console.log(ninja.distance_traveled);
+
+	</script>
+</head>
+<body>
+	<h1>JavaScript Constructors</h1>
+		<p>Open Inspect Element and look at the Console to see the outputs for each of the functions.</p>
+		<p>You can also try invoking the functions with your own variables using the Console.</p>
+	<h3></h3>
+	<pre><code>
+	</code></pre>
+</body>
+</html>
